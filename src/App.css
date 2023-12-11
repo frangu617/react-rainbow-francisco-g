@@ -1,5 +1,13 @@
+body{
+  text-align: center;
+}
 .App {
   text-align: center;
+  width:80%;
+  margin:0 auto;
+  box-shadow:#282c34 10px 10px 10px;
+  border: #282c34 1px solid;
+ 
 }
 
 .App-logo {
@@ -28,6 +36,27 @@
   color: #61dafb;
 }
 
+.colorBlock{
+  margin:0;
+}
+
+.ColorForm{
+  background: linear-gradient(to right, 
+                                red, 
+                                orange, 
+                                yellow, 
+                                green, 
+                                blue, 
+                                indigo, 
+                                violet);
+}
+ p{
+  margin:0;
+ }
+
+ .refresh{
+   background-color: rgb(255, 255, 255, 0.4);
+ }
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

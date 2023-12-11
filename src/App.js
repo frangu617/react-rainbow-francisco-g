@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import React, { useState } from 'react'
+import ColorBlock from './ColorBlocks.js';
+import ColorForm from './ColorForm.js';
+
+
+
+
 
 function App() {
+  let [colors, setColors] = useState([])
+
+  let colorMap = colors.map((color, i) => {
+    return (
+      <ColorBlock key={i} color={color} />
+    )
+  })
+
+
+
+  let addColor = (newColor) => {
+    setColors([...colors, newColor])
+  }
+
+  let addRainbow = () => {
+    let rainbow = ['violet', 'blue', 'lightblue', 'green', 'greenyellow', 'yellow', 'orange', 'red']
+    
+    setColors(colors.concat(rainbow))
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <>
+        {colorMap}
+      </>
+      <div className='ColorForm'>
+      <ColorForm addColor={addColor} />
+      <button onClick={addRainbow}>Or Add the Rainbow</button>
+      <p className='refresh'>***Refresh the page to start over***</p>
+      </div>
     </div>
-  );
+  )
 }
+
 
 export default App;
