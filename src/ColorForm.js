@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const cssColorNames = [
+const cssColorNames = [ //got this list from chatgpt
     "AliceBlue", "AntiqueWhite", "Aqua", "Aquamarine", "Azure",
     "Beige", "Bisque", "Black", "BlanchedAlmond", "Blue",
     "BlueViolet", "Brown", "BurlyWood", "CadetBlue", "Chartreuse",
@@ -33,7 +33,7 @@ const cssColorNames = [
     "WhiteSmoke", "Yellow", "YellowGreen"
   ];
 
-  function isValidColor(color) {
+  function isValidColor(color) {    //got this with help from chatgpt
     // Check if it's a valid CSS color name
     if (cssColorNames.includes(color.charAt(0).toUpperCase() + color.slice(1))) {
         return true;
